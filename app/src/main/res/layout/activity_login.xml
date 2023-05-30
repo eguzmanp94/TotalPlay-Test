@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/primaryColor"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:theme="@style/Theme.TotalPlayTest"
+    tools:context=".mvp.view.activities.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo_nombre" />
+
+    <ImageView
+        android:id="@+id/ic_account"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_account"
+        app:tint="@color/secondaryColor" />
+
+    <TextView
+        android:id="@+id/txt_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_account"
+        android:text="@string/txt_ingresa"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_user"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/txt_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/secondaryColor"
+        app:hintTextColor="@color/secondaryColor"
+        android:layout_toStartOf="@id/iv_help">
+        <EditText
+            android:id="@+id/edtx_user"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColorHint="@color/secondaryColor"
+            android:textColor="@color/secondaryColor"
+            android:hint="@string/txt_user_email"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/iv_help"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_help"
+            android:elevation="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/secondaryColor" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/rl_user"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_pass"
+            android:layout_toStartOf="@id/iv_showpass"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/secondaryColor"
+            app:hintTextColor="@color/secondaryColor"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edtx_pass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/txt_pass"
+                android:textColorHint="@color/secondaryColor"
+                android:textColor="@color/secondaryColor"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/iv_showpass"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_show_pass"
+            android:elevation="50dp"
+            app:tint="@color/secondaryColor"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_recover_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_pass"
+        android:layout_marginTop="15dp"
+        android:text="@string/txt_recover_pass"
+        android:textColor="@color/blue" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_recover_pass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_button_blue"
+        android:text="@string/txt_login"
+        android:textAllCaps="false"
+        android:textColor="@color/primaryColor"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="¿No tienes contraseña? Registrate aquí"
+        android:textColor="@color/blue" />
+
+
+</RelativeLayout>

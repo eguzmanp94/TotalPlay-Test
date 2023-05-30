@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TotalPlay Test</string>
+    <string name="txt_ingresa">Ingresa a tu cuenta.</string>
+    <string name="txt_recover_pass">Olvide mi contraseña</string>
+    <string name="txt_user_email">Cuenta, correo y teléfono</string>
+    <string name="txt_pass">Contraseña</string>
+    <string name="txt_login">Iniciar sesión</string>
+    <string name="txt_use_references">Utiliza la referencia bancaria para pagar en los bancos particiapantes</string>
+</resources>
